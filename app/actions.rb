@@ -100,9 +100,7 @@ def search_single_sticker(param1)
   JSON.parse(buffer)
 end
 
-# Homepage (Root path)
 get '/' do
- # @card_class = "card"
  @classes = "full_page"
  @parallax_class = "parallax_class"
  erb :start
