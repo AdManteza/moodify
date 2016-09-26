@@ -86,7 +86,7 @@ end
 def search_by(mode, param1, param2)
   limit = result_limit(mode)
 
-  url = "http://api.giphy.com/v1/#{mode}/search?q=#{param1}+#{param2}&api_key=dc6zaTOxFJmzC&limit=#{limit}&rating=pg-13"
+  url = "https://api.giphy.com/v1/#{mode}/search?q=#{param1}+#{param2}&api_key=dc6zaTOxFJmzC&limit=#{limit}&rating=pg-13"
   resp = Net::HTTP.get_response(URI.parse(url))
   buffer = resp.body
   JSON.parse(buffer)
@@ -94,7 +94,7 @@ end
 
 def search_single_sticker(param1)
   param2 = " "
-  url = "http://api.giphy.com/v1/stickers/search?q=#{param1}+#{param2}&api_key=dc6zaTOxFJmzC&limit=10"
+  url = "https://api.giphy.com/v1/stickers/search?q=#{param1}+#{param2}&api_key=dc6zaTOxFJmzC&limit=10"
   resp = Net::HTTP.get_response(URI.parse(url))
   buffer = resp.body
   JSON.parse(buffer)
