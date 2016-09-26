@@ -1,0 +1,147 @@
+nav {
+	background-color: rgba(255,255,255,0);
+}
+
+nav ul a {
+	color: white;
+}
+
+.parallax img {
+	display: unset;
+}
+
+.parallax-container {
+	height: 550px;
+}
+
+#mood-form {
+	margin: 7.5rem 0 1rem 0;
+	background-color: rgba(255,255,255,0);
+	color: white;
+}
+
+#mood-form input {
+	width: 75%;
+}
+
+#mood-form p {
+	font-size: 2em;
+}
+
+iframe {
+	height: auto;
+	width: auto;
+	max-width: 150px;
+	max-height: 150px;
+}
+
+.img-container {
+	border-style: solid;
+	border-color: rgba(156, 76, 146, 0.7);
+	border-width: 1px;
+	border-radius: 60px;
+	margin-top: 15px;
+}
+
+.parallax_class_other {
+	height: 160px;
+}
+
+
+.parallax_class {
+	height: 100%;
+}
+
+
+.full_page {
+	height: 100%;
+}
+
+.friends {
+	 border-radius: 5px 20px 5px;
+	 background-color: #26a69a;
+	 height: 75px;
+	 width: 75px;
+	 float: left;
+	 margin: 16px;
+	 line-height: 75px;
+	 text-align: center;
+	 color: white;
+	 letter-spacing: 2px;
+}
+
+.friends a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.valign-wrapper {
+	float: right;
+	padding: 12px;
+	font-style: italic;
+	color: #229489
+}
+
+.valign-wrapper a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.switch {
+	display: inline;
+	margin-left: 2px;
+}
+
+.switch label .lever {
+	background-color: #26a69a;
+}
+
+.switch label .lever:after {
+	background-color: #26a69a;
+}
+
+
+.container .results_text {
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-style: italic;
+	font-weight: 600;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.home_container {
+	margin-bottom: 50px;
+}
+
+.mood_text {
+	font-family: 'Lato', sans-serif;
+}
+
+.delete_button {
+    background-image: url(/images/delete2.png); /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 24px;           /* make this the size of your image */
+    padding-left: 24px;     /* make text start to the right of the image */
+    vertical-align: middle; 
+    position: absolute;
+    float: right;
+    right: 15px;
+    top: 15px;
+}
+/*
+.delete {
+	margin-left: -35px;
+	position: absolute;
+	margin-top: 20px;
+}
+*/
+
+#show {
+	display: inline-block;
+	position: relative;
+}

@@ -1,0 +1,65 @@
+
+<div class="row">
+	<div class="col s6">
+	<% if current_user.id == @user.id %>
+		<h1>My Wall</h1>
+	<% else %>
+		<h1><%= @user.name %>'s Wall</h1>
+	<% end %>
+			<form method="post" action="/users/:id">
+			<label for="url_one"></label>
+			<input type="hidden" name="tagged_user_id" value="<%= @user.id %>">
+			<input type="text" name="url_one" placeholder="One" required>
+			<input type="text" name="url_two" placeholder="Two" required>
+			<input type="text" name="url_three" placeholder="Three" required>
+			<input type="text" name="url_four" placeholder="Four" required>
+
+			<input type="submit" value="Post!" class="btn">
+			</form>
+	</div>
+
+	<div class="col s6">
+	<h1>Friends</h1>
+	<% @friends.each do |user| %>
+		<div class="friends">
+			<a href="/users/<%= user.id %>">
+				<%= user.name%>
+			</a>
+		</div>
+	<% end %>
+	</div>
+</div>
+
+<% @post.each do |post| %>
+
+	<div class="col s6 img-container" id="show">
+
+		<div class="row">
+			<div class="col s6">
+				<iframe src="<%= post.url_one%>" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+			</div>
+
+		<% if @user.id == current_user.id %>
+				<form action="/delete/<%=post.id%>" method="post">
+	  			<input type="hidden" name="_method" value="DELETE">
+	  			<input type="submit" value="" class="delete_button">
+				</form>
+		<% end %>
+
+			<div class="col s6">
+				<iframe src="<%= post.url_two%>" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s6">
+				<iframe src="<%= post.url_three%>" width="480" height="564" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+			</div>
+			<div class="col s6">
+				<iframe src="<%= post.url_four%>" width="480" height="331" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+			</div>
+		</div>
+		<div class="valign-wrapper"><a href="/users/<%= post.user_id %>"><%= @all_users.find_by_id(post.user_id).name %>&nbspposted this</a></div>
+
+	</div>
+<%end%>

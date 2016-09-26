@@ -1,0 +1,15 @@
+<h1>Login</h1>
+
+<% if session[:login_error] %>
+  <span class="red-text text-darken-2"><p><%= session[:login_error] %></p></span>
+<% end %>
+
+<form method="post" action="/login">
+	<label for="name">Username:</label>
+	<input type="text" name="name" required>
+
+	<label for="password">Password:</label>
+	<input type="password" name="password" required>
+
+	<input type="submit" value="Log in" class="btn">
+</form>

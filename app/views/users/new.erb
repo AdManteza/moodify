@@ -1,0 +1,15 @@
+<h1>Sign up</h1>
+
+<% if session[:sign_up_error] %>
+  <span class="red-text text-darken-2"><p><%= session[:sign_up_error] %></p></span>
+<% end %>
+
+<form name="myForm" method="post" action="/signup">
+	<label for="name">Username:</label>
+	<input type="text" name="name" required>
+	<label for="password">Password:</label>
+	<input type="password" name="password" required>
+	<input type="submit" value="Signup!" class="btn">
+</form>
+
+

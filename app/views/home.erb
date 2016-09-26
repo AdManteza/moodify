@@ -1,0 +1,15 @@
+<div class="container">
+	<% if mood1 == "cat" %>
+	<h4 class="results_text">Didn't catch that, take a look at some crazy cats</h4>
+	<% elsif mood1 == "dancing" %>
+	<h4 class="results_text">You're already in a good mood. Enjoy</h4>
+	<% elsif mood1 == "happy" %>
+	<h4 class="results_text">You're feeling <%= mood2 %>, look at these to cheer up!</h4>
+	<% elsif mood1 == "weird" %>
+	<h4 class="results_text">You're feeling <%= mood2 %>, here's some weird stuff</h4>
+	<% end %>
+
+	<% @result["data"].each do |data| %>
+	 <iframe src="<%= data["embed_url"] %>" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+	<%end%>
+</div>

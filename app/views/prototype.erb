@@ -1,0 +1,9 @@
+<h1>Home Page</h1>
+
+
+
+ <!-- <iframe src="<%= @result["data"][0]["embed_url"] %>" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> -->
+
+<%@result["data"].each do |data|%>
+  <iframe src="<%= data["embed_url"] %>" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<%end%>

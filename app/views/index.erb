@@ -1,0 +1,42 @@
+<div class="container">
+<% if mood1 == "cat" %>
+<h4>Didn't catch that, here are some crazy cats</h4>
+<% elsif mood1 == "dancing" %>
+<h4>You're already in a good mood. Enjoy</h4>
+<% elsif mood1 == "happy" %>
+<h4>You're feeling <%= mood2 %>, look at these to cheer up!</h4>
+<% elsif mood1 == "weird" %>
+<h4>You're feeling <%= mood2 %>, here's some weird stuff</h4>
+<% end %>
+
+	<% @result["data"].shuffle!.each do |data| %>
+	 <iframe src="<%= data["embed_url"] %>" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+	<%end%>
+</div>
+
+
+
+
+<!-- <h4>You feel <%= mood1%> and <%= mood2%> after seeing this..</h4>
+ -->
+
+<!-- Good thing your'e feeling #{happy}, no need to cheer you up!
+
+#{adventure time}
+
+happy = [playful, hopeful, loving, joyful, energetic, important, confident, optimistic, powerful, proud, respected, sarcastic, happy]
+
+You're feelin #{}
+
+sad = [rejected, inferior, inadequate, lonely, anxious, depressed, apathetic, scared, frightened, shocked, horrified, startled, terrified, threatened, victimized, vulnerable, withdrawn, worried, worthless, judgemental, lonely, loathing, isolated, jealous, irritated, insignificant, insecure, infuriated, hateful, angry, pissed, furious, hostile, hurt, ignored, mad]
+
+Hope this cheers you up!
+#{happy}
+
+Enjoy #{weird}
+
+bored = [dull, disamused, bored, empty, trippy, crazy]
+
+
+Didn't catch that..
+#{funny cat}  -->
